@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+  
+// function hero (nombre){
+//     const hero={
+//         name:nombre
+//     }
+//     hero.saludar = function () {
+//         console.log(`hola soy ${this.name}`)
+//     }
+//     return hero;
+// }
+
+//     const jesus = hero("jesus");
+//         jesus.saludar();
+
+//    const spiderman = hero('spiderman');
+
+           
+//             spiderman.saludar();
+
+//mas optimizado
+
+// const heroMethods={
+//     saludar : function () {
+//         console.log(`hola soy ${this.name}`)
+//     },
+
+// };
+//     function hero(nombre) {
+//         const hero = {
+//             name: nombre
+//         }
+//        hero.saludar = heroMethods.saludar;
+//         return hero;
+//     }
+
+//     const jesus = hero("jesus");
+//     jesus.saludar();
+
+//     const spiderman = hero('spiderman');
+
+
+//     spiderman.saludar();
+
+    //mas optimzado
+
+    // const heroMethods = {
+    //         saludar: function () {
+    //             console.log(`hola soy ${this.name}`)
+    //         },
+
+    //     };
+    //     function hero(nombre) {
+    //         const hero = Object.create(heroMethods)
+    //         hero.name=nombre;
+    //         return hero;
+    //     }
+
+    //     const jesus = hero("jesus");
+    //     jesus.saludar();
+
+    //     const spiderman = hero('spiderman');
+
+
+    //     spiderman.saludar();
+
+    //  const heroMethods = {
+    //         saludar: function () {
+    //             console.log(`hola soy ${this.name}`)
+    //         },
+
+    //     };
+    //prototipe
+        // function Hero(nombre) {
+        //     const hero = Object.create(Hero.prototype);
+        //     hero.name = nombre;
+        //     return hero;
+        // }
+        // Hero.prototype.saludar =  function () {
+        //         console.log(`hola soy ${this.name}`)
+        //     }
+
+        // const jesus = Hero("jesus");
+        // jesus.saludar();
+
+        // const spiderman = Hero('spiderman');
+
+
+        // spiderman.saludar();
+
+        // new
+          function Hero(nombre) {
+                // const hero = Object.create(Hero.prototype);
+                this.name = nombre;
+                
+            }
+            Hero.prototype.saludar = function () {
+                console.log(`hola soy ${this.name}`)
+            }
+
+            const jesus = new Hero("jesus");
+            jesus.saludar();
+
+            const spiderman = new Hero('spiderman');
+
+
+            spiderman.saludar();
+  
+  </script>
+ 
+
+</body>
+</html>
